@@ -1,0 +1,475 @@
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+background-color: #A8DADC;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+background-color: #A8DADC;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #E63946; 
+border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #E63946aa; 
+}
+
+.body{
+    margin: 0px;
+    color:#444;
+    color: #E63946;
+    $red : #E63946;
+    color: #F1FAEE;
+    $myWhite: #F1FAEE;
+    color: #A8DADC;
+    $lightblue: #A8DADC;
+    color: #457B9D;
+    $midBlue: #457B9D;
+    color: #1D3557;
+    $verydark: #1D3557;
+    color: #F1FAEE;
+    background-image: url("../image/sfondo.jpg");
+    background-size: cover;
+    background-attachment:fixed;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    #nav{
+        
+        height: 80px;
+        margin-bottom: 40px;
+        background-color:transparent;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        transition: all 0.5s;
+        z-index: 5;
+        #menu{
+            flex-basis: 100px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            max-width: 800px;
+            margin: auto;
+            .menu{
+                flex-basis: 80px;
+                flex-grow: 1;
+                line-height: 30px;
+                text-align: center;
+                height: 30px;
+                margin-top: 20px;
+                border-right: 1px solid #F1FAEE;
+                overflow: hidden;
+                &:nth-of-type(6){
+                     border-right: none;
+                 }
+                &:nth-of-type(2){
+                    border-left: 1px solid #F1FAEE;
+                 }
+                a{
+                    color: #f1faee;
+                    &:hover{
+                        text-decoration: none;
+                        color:  #E63946;
+                    }
+                    &:focus{
+                        text-decoration: none;
+                    }
+                }
+            }
+            #logo{
+                width: 90px;
+                height: 60px;
+                background-image: url("../image/logo.jpg");
+                background-image: url("../image/LOGO.eps");
+                background-image: url("../image/mamprin.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-top: 5px;
+                border-right: none;
+            } 
+        } 
+    }
+    #front{
+        height: 100vh;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 100px;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        .main-title{
+            font-size: 40px;
+        }
+        .title{
+            font-size: 25px;
+        }
+        .typed-words{
+            color: #E63946;
+        }
+    }
+
+    #story{
+        background-color: $myWhite;
+        color: $red;
+        color: $verydark;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: -2px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #contacts{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: #A8DADC;
+        background-color: $midBlue;
+        background-color: $lightblue;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .contatti{
+            flex-basis: 285px;
+            height: 270px;
+            text-align: center;
+            padding-top: 70px;
+            font-size: 16px;
+            font-weight: 500;
+            color: $myWhite;
+            .copyMe{
+                border-radius: 15px;
+                padding: 4px;
+                padding-left: 12px;
+                padding-right: 12px;
+                position: relative;
+                display: inline-block;
+                transition: all 0.5s;
+                
+                .tooltiptext{
+                    visibility: hidden;
+                    width: 120px;
+                    background-color: $myWhite;
+                    color: $verydark;
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 8px 0;
+                    position: absolute;
+                    z-index: 1;
+                    top: 45px;
+                    left: 25%;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 100%;
+                        left: 50%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: transparent transparent $myWhite transparent;
+                      }
+                }
+                &:hover{
+                    background-color: $verydark;
+                    background-color: $midBlue;
+                    cursor: pointer;
+                    .tooltiptext{
+                        visibility: visible;
+                    }
+                }
+            }
+            p{
+                &:nth-of-type(1){
+                    font-weight: 700;
+                }
+            }
+            img{
+                width: 16px;
+            }
+        }
+        #mail{
+            background-image: url("../image/envelope.png");
+            background-size: cover;
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+        #phone{
+            background-image: url("../image/phone.png");
+            background-size: cover;
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+    }
+    #gifs{
+        padding-top: 40px;
+        padding-bottom: 20px;
+        background-color: #F1FAEE; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        .gif-flex{
+            flex-basis: 31%;
+            max-height: 250px;
+        }
+        #tornio, #fresa, #printer, #component{
+            background-image: url("../image/EFon.gif");
+            background-position: 50%;
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: cover;
+            margin: 5px;
+            &:hover{
+                transition: all  1s;
+                -moz-transition: 1s;
+                -webkit-transition: 1s;
+                -o-transition: 1s;
+                background-position: 0%;
+                border-radius: 10px;   
+            }
+        }
+        #fresa{
+            background-image: url("../image/fresa.gif");
+        }
+        
+        #printer{
+            background-image: url("../image/3Dprinter.gif");
+        }
+        #component{
+            background-image: url("../image/BL4s.gif");
+        }
+        .hover{
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 0.0);
+            transition: 0.5s;
+            -moz-transition: 0.2s;
+            -webkit-transition: 0.2s;
+            -o-transition: 0.2s;
+            color:transparent;
+          
+            font-size: 45px;
+            text-align: center;
+            line-height: 250px;
+            &:hover{
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background-color: #457B9D9a;
+                color: #F1FAEE;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    #lavorazioni , #elettronica, #cablaggio{
+        background-image: url("../image/sfondo3.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+        background-size: cover;
+        font-weight: 700;
+        padding-top: 80px;
+        .sfondo{ 
+            width: 85%;
+        }
+        .main-title{
+            font-size: 20px;
+        }
+        .title{
+            font-size: 15px;
+        }
+        .shadow{
+            width: 90%;
+            height: 100%;
+            background-color: #1D355788;
+            background-color: $lightblue;
+            
+            padding: 30px;
+            padding-top: 60px;
+            padding-left: 60px;
+            clip-path: polygon(0% 0%, 80% 0%, 100% 60%, 100% 100%, 0% 100%);
+            color: $verydark;
+        }
+    }
+    #elettronica{
+        background-image: url("../image/piastra.jpg");
+    }
+    #cablaggio{
+        background-image: url("../image/cablaggio1.jpg");
+    }
+    .space{
+        height: 50px;
+        background-color: $myWhite;
+    }
+
+    #sectors{
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        background-color: $myWhite;
+        color: $verydark;
+        p{
+            &:nth-of-type(1){
+                font-weight: 600;
+            }
+        }
+        .main-title{
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        #carouselExampleIndicators{
+            img{
+                max-height: 350px;
+                margin: auto;
+                border-radius: 5px;
+            }
+            .carousel-caption{
+                h5{
+                background-color: #F1FAEEcc;
+                margin: auto;
+                width: 300px;
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 20px;
+                color: $verydark;
+                }
+            }
+            ol{
+                position: absolute;
+                top: 20px;
+                li{
+                    width: 24px;
+                    border-radius: 0px;
+                    height: 4px;
+                }
+            }
+            .carousel-control-prev-icon{
+                position: relative;
+                top: -200px;
+                left: -500px;
+                img{ 
+                transform: rotate(180deg);
+                }
+            }
+            .carousel-control-next-icon{
+                position: relative;
+                top: -200px;
+                left: 500px;
+            }
+        }
+        
+    }
+    #where{
+        background-color: $verydark;
+        height: 400px;
+        iframe{
+            height: 400px;
+            width: 100%;
+            border: 1px solid $verydark;
+        }
+    }
+    #footer{
+        border-bottom: none ;
+        border-top: 3px solid #E63946;
+        margin-bottom: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        min-height: 380px;
+        text-align: left;
+        font-size: 12px;
+        background-image: url("../image/footer.jpg");
+        background-size: cover;
+        background-position: 50%;
+        background-attachment: fixed;
+        p,h4{
+            margin-left: 20px;
+        }
+    }
+    .sections{
+        min-height: 300px;
+        width: 100%;
+    }
+    
+   
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .body {
+        background-image: url("../image/sfondo.jpg");
+        background-position: 70%;
+        width: 100vw;
+        overflow-x: hidden;
+        #nav{
+            height: 40px;
+            #menu{
+                font-size: 8px;
+                .menu{
+                    margin-top: 5px;
+                    &:nth-of-type(2){
+                        border-left: 0px solid black;
+                    }
+                }
+                #logo{
+                    max-width: 40px;
+                    max-height: 30px;
+                    margin-left: 5px;
+                    border-right: none;
+                } 
+            }
+        }
+        #front{
+            height: 100vh;
+            .main-title{
+                font-size: 20px;
+            }
+            .title{
+                font-size: 15px;
+            }
+            .typed-words{
+                color: #E63946;
+            }
+
+        }
+    }
+    #gifs{
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        min-height: 150px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+        .gif-flex{
+            max-width: 200px;
+            max-height: 150px;
+            width: 200px;
+            .hover{
+                min-width: 200px;
+                max-height: 150px;
+                font-size: 35px;
+                line-height: 150px;
+            }
+        }
+    }
+    #sectors{
+        #carouselExampleIndicators{
+            height: 300px;
+            img{
+                height: 250px;
+            }
+        }
+    }
+}

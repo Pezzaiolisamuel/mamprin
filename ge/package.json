@@ -1,0 +1,18 @@
+{
+  "name": "ge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch client/sass/main.scss client/css/main.css"
+  },
+  "author": "sam",
+  "license": "ISC"
+}
